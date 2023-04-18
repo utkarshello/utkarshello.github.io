@@ -1,0 +1,360 @@
+/*
+Apple Heading Grey: #767676;
+Headings Black: #222222;
+Body Grey, dark: #444444;
+*/
+
+/* ---------- TYPOGRAPHY ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@900&display=swap');
+
+/* Fluid Responsive Font Size - 21px on desktop & 16px on mobile */
+html {
+  font-size: calc(15px + 0.390625vw);
+}
+
+body {
+  background: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.618;
+  color: #444444;
+  margin: 0 auto;
+}
+
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 calc(8px + 1.5625vw);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+
+h1 {
+  margin: 0 0 1.38rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  line-height: 1.3;
+  font-size: 2rem;
+  color: #222222;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 3rem 0 1.38rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #222222;
+}
+
+/* TypeScale - Major Third - 1.250 */
+h2 {
+  font-size: 1.563rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+/* Functional Text */
+caption,
+small,
+.text-small {
+  font-size: max(14px, 0.8rem);
+}
+
+/* .big-sub {font-size: 1.25rem;} */
+
+
+/* ---------- GLOBAL STYLES ---------- */
+
+
+div,
+img {
+  border-radius: 24px;
+}
+
+button {
+  background-color: #dadada;
+  color: #222222;
+  border: 2px solid #222222;
+  padding: 16px 48px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #222222;
+  color: white;
+  border: 2px solid #222222;
+  padding: 14px 46px;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+  font-size: clamp(14px, 0.85rem, 18px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  padding: 0 calc(8px + 1.5625vw);
+  position: sticky;
+  top: 0;
+  margin-bottom: 4rem;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.header-nav li {
+  margin: 0 1rem;
+}
+
+.header-nav a,
+.header-logo {
+  color: #222222;
+  text-decoration: none;
+}
+
+.header-nav a:hover {
+  text-decoration: underline 2px;
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero p {
+  max-width: 80ch;
+}
+
+.hero-title {
+  font-size: 3.62rem;
+}
+
+@media screen and (max-width: 708px) {
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3.62rem);
+  }
+}
+
+.apple-grey {
+  color: #767676;
+}
+
+.black-link {
+  color: #444;
+}
+
+
+/* ---------- HERO NAV ---------- */
+
+.hero-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.hero-nav li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-nav a {
+  font-size: clamp(14px, 0.85rem, 18px);
+  display: inline-block;
+  padding: 4px 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #444444;
+  border-radius: 4px 4px 0 0;
+  border-color: #fff #fff #222 #fff;
+  border-style: solid;
+  border-width: 2px 0 2px;
+  transition: background-color 0.3s ease-out, border-color 0.3s ease-out, border-radius 0.3s ease-out;
+}
+
+.hero-nav a:hover {
+  color: #fff;
+  background-color: #222;
+  border-color: #222;
+  border-radius: 4px;
+}
+
+
+/* ---------- WORK SECTION ---------- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.project-title {
+  margin: 1rem 0 -0.5rem;
+  font-weight: 500;
+}
+
+.project-card p {
+  font-size: clamp(14px, 0.85rem, 18px);
+}
+
+.project-card * {
+  text-decoration: none;
+}
+
+.project-title:hover {
+  text-decoration: underline;
+}
+
+.project-card {
+transition: transform .2s; /* Animation */
+}
+
+.project-card:hover{
+  transform: scale(1.025);
+}
+
+
+/* ---------- FOOTER SECTION ---------- */
+
+footer {
+  border-top: 1px solid #ccc;
+  margin-top: 4rem;
+  padding: 3rem calc(8px + 1.5625vw) 2rem;
+  font-size: clamp(14px, 0.85rem, 18px);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: end;
+  justify-content: flex-end;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.footer-nav a {
+  color: #767676;
+  text-decoration: none;
+}
+
+.footer-nav * {
+  display: inline;
+  color: #767676;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
+footer nav a:hover {
+  color: #222222;
+}
+
+.footer-right p {
+  margin-bottom: 0;
+}
+
+/* MAKING FOOTER RESPONSIVE */
+
+@media (max-width: 600px) {
+  #footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-footer,
+  .contact-buttons {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  .left-footer p {
+    margin-bottom: 0.5em;
+  }
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+
+/* ---------- UX Case Study Page ---------- */
+
+.date {
+  color: #767676;
+  margin-bottom: 2rem;
+  margin-top: -1rem;
+}
+
+.grey-textbox {
+  background-color: #F3F3F3;
+  padding: 2rem 2rem 2rem;
+  border-radius: 24px;
+}
+
+.no-round {
+  border-radius: 0;
+}
+
+.grey-border {
+  border: #ccc solid 1px;
+}
+
+a {
+  color: #222;
+}
