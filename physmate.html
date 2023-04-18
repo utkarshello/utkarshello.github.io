@@ -1,468 +1,757 @@
 <!DOCTYPE html>
-<html lang="en"><!-- 
+<html lang="en">
+  <!-- 
     __
   <(o )___   QUACK QUACK
    ( ._> /
  ~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<head>
-
+  <head>
     <title>UX Case Study - Physmate, a Smart Goniometer | Utkarsh Singh</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Utkarsh Singh">
-    <meta name="description"
-        content="UX Case study of an app that helps physiotherapists record R.O.M (Range of Motion) data more efficiently.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Utkarsh Singh" />
+    <meta
+      name="description"
+      content="UX Case study of an app that helps physiotherapists record R.O.M (Range of Motion) data more efficiently."
+    />
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!---------- GOOGLE FONTS ---------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!---------- Header ---------->
     <header>
-        <a href="index.html" class="header-logo">
-            Utkarsh Singh
-        </a>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="index.html" class="hover-effect">work</a></li>
-                <li><a href="about.html" class="hover-effect">about</a></li>
-                <li><a href="#footer" class="hover-effect">contact</a></li>
-            </ul>
-        </nav>
+      <a href="index.html" class="header-logo"> Utkarsh Singh </a>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="index.html" class="hover-effect">work</a></li>
+          <li><a href="about.html" class="hover-effect">about</a></li>
+          <li><a href="#footer" class="hover-effect">contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Main Content-->
     <main>
-        <!-- Case Study -->
-        <article class="case-study">
-            <h1>UX Case Study: Physmate, a Smart Goniometer App for Physiotherapists</h1>
-            <p class="date"><small>April 17, 2023 • Utkarsh Singh</small></p>
-            <img src="img/physmate/cover.png" width="100%"
-                alt="Cover image for case study teasing the final app design.">
-
-            <h2>Overview</h2>
-
-            <p>Physiotherapists often use goniometers to measure joint range of motion (R.O.M.) in their patients.
-                However, this manual process can be time-consuming and prone to errors. To address this issue, we
-                designed Physmate, a mobile app that offers an easy and accurate way to measure and record R.O.M data.
-            </p>
-
-            <p>Physmate is a smart goniometer app that utilizes the sensors on modern smartphones to measure joint
-                movement accurately. It generates detailed reports that simplify the recording process for
-                physiotherapists. With our app, therapists can save valuable time that would have been spent taking
-                manual measurements and focus more on providing care to their patients.</p>
-
-            <p>In this case study, I will take you through our design process and how we created an intuitive and
-                effective solution for physiotherapists.</p>
-
-
-            <h2>Scope & Constraints</h2>
-
-            <p>Physmate was a UX design project completed as part of the Interaction Design program at Conestoga
-                College. Our team of 5 students had 5 weeks to design a prototype for a physiotherapy application. The
-                scope of our project was limited to the design phase, including research, ideation, prototyping, and
-                testing.</p>
-
-            <h2>Roles and Responsibilities</h2>
-
-            <div class="grey-textbox">
-                <p><b>What I did:</b></p>
-                <ul>
-                    <li>Conducted user interviews and did empathy mapping.</li>
-                    <li>Collaborated with Prasanna on user flows and wireframes.</li>
-                    <li>Designed and created high-fidelity mock-ups and the final prototype.</li>
-                    <li>Presented the final design to stakeholders along with Prasanna and Alex.</li>
-                </ul>
-            </div>
-
-            <p>I was privileged to work alongside a highly capable team, consisting of Prasanna, Alex, Deepti, and
-                Mubeen. Together, we conducted extensive research, including user interviews, secondary research, and
-                competitive analysis. We met regularly to discuss our findings and plan our next steps.</p>
-
-            <p>As we moved into the prototype phase, we divided responsibilities. Prasanna and I worked on wireframes,
-                while Deepti and Mubeen focused on branding and user testing. I then took on the responsibility of
-                creating high-fidelity mockups and the final prototype. Meanwhile, Alex, Deepti, and Prasanna worked on
-                compiling research, creating the stakeholder presentation, and the design process book.</p>
-
-            <p>Throughout the project, we maintained open communication and assisted each other as needed. Our team had
-                excellent synergy, and everyone contributed 100% effort to the project. Finally, Prasanna, Alex and I
-                presented our design to the stakeholders.</p>
-
-
-            <h2>The Problem</h2>
-
-            <p>Through the interviews we conducted with practicing physiotherapists, we learnt about one of their
-                biggest pain points:</p>
-
-            <ul>
-                <li>Physiotherapists constantly need to juggle between assessing the patient and noting down the
-                    measurements and readings from the assessment.</li>
-                <li>Later, they have to spend a considerable amount of time compiling and organizing this data into
-                    reports, often requiring them to stay late to complete paperwork.</li>
-            </ul>
-
-            <p>Based on these research insights, we defined the problem statement.</p>
-
-            <img src="img/physmate/Problem-Statement.png" class="no-round" width="100%"
-                alt="Dr. Erica, a busy physiotherapist needs to record quantitative data regarding her patients’ recovery. But, it takes away too much of her time because she records and compiles the data manually.">
-
-            <h2>Users and Audience</h2>
-
-            <p>The primary users of Physmate are physiotherapists, who are responsible for helping people affected by
-                injury, illness or disability through movement and exercise, manual therapy, education and advice.</p>
-
-            <img src="img/physmate/persona-erica.png" class="grey-border" width="100%"
-                alt="User Persona - Dr. Erica, a physiotherapist.">
-
-            <p>Secondary users include patients who will benefit from the efficient assessment and treatment process
-                provided by Physmate. The audience for this product includes physiotherapy clinics and hospitals where
-                physiotherapy is practiced.</p>
-
-
-            <h2>Research</h2>
-
-            <p>In order to gain a deeper understanding of the problem space and user needs, we conducted various
-                research activities. Our research focused on identifying the pain points of physiotherapists,
-                understanding the needs of physiotherapy patients, and analyzing the competitive landscape of existing
-                mobile apps in the physiotherapy space.</p>
-
-            <h3>Research Methods</h3>
-
-            <p>To gather insights, we used the following methods:</p>
-            <ol>
-                <li><strong>Interviews with Physiotherapy Patients and Practitioners:</strong> We conducted in-depth
-                    interviews with 5 physiotherapy patients and 2 practicing physiotherapists to understand their
-                    experiences, pain points, and needs. We asked open-ended questions and encouraged them to share
-                    their thoughts and feelings about the physiotherapy process.</li>
-
-                <li><strong>Online Research:</strong> We did online research to gain an understanding of how
-                    physiotherapy works in Ontario, the regulations around the practice, and the challenges faced by
-                    patients and practitioners.</li>
-
-                <li><strong>Competitive Analysis:</strong> We analyzed the mobile apps available in the physiotherapy
-                    space to identify their strengths, weaknesses, and features.</li>
-
-                <li><strong>User Testing:</strong> We conducted user testing with our prototype to gather feedback and
-                    insights from potential users.</li>
-            </ol>
-
-            <h3>Key Research Insights:</h3>
-
-            <h4>Pain points for physiotherapists:</h4>
-            <ul>
-                <li>The need to constantly juggle between assessing patients and documenting data</li>
-                <li>The time-consuming nature of creating reports based on assessment data</li>
-                <li>Late-night work hours due to paperwork overload</li>
-            </ul>
-
-            <h4>Other Important Insights:</h4>
-            <ul>
-                <li>Passive range of motion is a key indicator of a patient's progress.</li>
-                <li>Patients who have a better understanding of their treatment and progress are more likely to do their
-                    at home exercises and recover faster.</li>
-            </ul>
-
-            <h3>Competitor Analysis</h3>
-
-            <p class="grey-textbox">Physmate stands out from the rest as it offers a solution for use by
-                physiotherapists in clinics.</p>
-
-            <p>In order to validate the technical feasibility of our design and identify our niche, we examined various
-                top physiotherapy apps in the market. Most of the apps focused on offering exercise programs for remote
-                physiotherapy, with some providing self-assessment tools for patients to send to physiotherapists. We
-                identified two products that were similar enough to our app to be considered as competitors:</p>
-            <ul>
-                <li><b><a href="https://www.mirarehab.com/product/">Mira</a></b><br>
-                    A gamified video physiotherapy exercise tool that allows for video range of motion assessments to be
-                    done.<br>
-                    * Requires additional sensors.</li>
-
-                <li><b><a href="https://www.exer.ai/">Exer</a></b><br>
-                    An at-home physiotherapy tool that uses Augmented Reality for patient self-assessment.<br>
-                    * Requires correct camera placement.</li>
-            </ul>
-
-            <p>However, these products do not specifically target physiotherapists as their primary users. Physmate, on
-                the other hand, offers a solution specifically designed for use by physiotherapists in clinics. This
-                sets us apart from our competitors and gives us our niche in the market. We believe that this market is
-                underserved and we can provide great value to professionals in the field.</p>
-
-            <h3>Technology Validation through Secondary Research</h3>
-
-            <p>To validate our app's technical feasibility, we conducted secondary research that led us to two relevant
-                research papers:</p>
-            <ul>
-
-                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6505893/">'Reliability and validity of
-                        clinically accessible smartphone applications to measure joint range of motion: A systematic
-                        review'</a></li>
-
-                <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S1934148214002147">'Mobile Smartphone
-                        Applications for Body Position Measurement in Rehabilitation: A Review of Goniometric Tools'</a>
-                </li>
-
-            </ul>
-
-            <p>These research papers concluded that smartphone-based digital goniometers are accurate enough to replace
-                standard goniometers used by clinicians. The research, conducted on a range of devices, indicates that
-                most modern smartphones have this capability. The review also confirmed a competent development team can
-                create this tool without proprietary software, using only device hardware.</p>
-
-
-            <h2>Design Process</h2>
-
-            <h3>Ideation</h3>
-            <p>To generate ideas for the Physmate app, we conducted brainstorming exercises like Crazy 6s and 3-panel
-                sketching.</p>
-
-            <h3>Crazy 6s</h3>
-            <p>During Crazy 6s, we generated multiple ideas, critiqued each other's proposals, and selected the most
-                promising ones to proceed with.</p>
-            <img src="img/Physmate/crazy6.jpg" width="100%" alt="Crazy 6 sketches">
-
-
-            <h3>3-Panel Sketches</h3>
-            <p>We then used 3-panel sketching to further develop and refine our ideas.</p>
-            <img src="img/Physmate/3panel.jpg" width="100%" alt="3 Panel Sketches with dot voting.">
-
-            <h3>Idea Convergence</h3>
-            <p>Finally, we used dot voting to converge on the most promising idea to take forward for the design
-                process.</p>
-            <img src="img/Physmate/idea-convergence.png" width="100%" alt="Idea Convergence Sketches">
-
-            <h3>User Flows</h3>
-            <p>To ensure an intuitive user experience, we created user flows for Physmate. We began by mapping out the
-                primary user journey, which involves the physiotherapist logging in, selecting the patient and the body
-                part they wish to assess, performing the assessment, and generating a report. We then created secondary
-                user flows to cover any additional features, such as adding new patients and reviewing previous
-                assessments. By creating user flows, we were able to identify potential pain points in the user journey
-                and make adjustments to create a more streamlined experience.</p>
-            <img src="img/Physmate/User-Flow.png" width="100%" alt="User Flow Diagrams">
-
-            <h3>Information Architecture</h3>
-            <p>We designed the information architecture of Physmate to be intuitive and easy to navigate. We began by
-                identifying the primary features of the app, such as the ability to select a patient, select a body
-                part, and perform an assessment. We then organized these features into a logical hierarchy to ensure
-                that users can quickly and easily find what they need. We also included clear labels and icons to aid
-                navigation and ensure a seamless user experience.</p>
-            <img src="img/Physmate/information-architecture.png" width="100%" alt="Information Architecture">
-
-            <h3>Wireframes</h3>
-            <p>Using the information architecture as a guide, we created wireframes for Physmate. We began with
-                low-fidelity wireframes to explore different layout options and ensure that the primary features of the
-                app were included.</p>
-            <img src="img/Physmate/wireframes.png" width="100%" alt="wireframes">
-
-            <h3>Test Early, Test Often (User Testing 1)</h3>
-            <p>At this stage, we heeded our professor's advice to “test early, test often”. We recognized the importance
-                of conducting user tests early on in the design process to identify areas of improvement and iterate
-                quickly.</p>
-
-            <p>To conduct our usability tests, we enlisted the help of a physiotherapist to participate in the study. We
-                used medium-fidelity wireframes to gather feedback. The physiotherapist provided valuable insights that
-                we had not considered before, such as:</p>
-
-            <ul>
-                <li>The importance of tracking both active and passive range of motion in patient assessments, with
-                    passive ROM being crucial in assessing progress.</li>
-
-                <li>The difficulty of taking notes while assisting patients with their assessments, and the subsequent
-                    challenge of compiling those notes into a report.</li>
-
-                <li>The effectiveness of sending progress reports to patients to motivate them to continue their
-                    recovery journey.</li>
-
-                <li>The industry standard scales used to measure pain levels.</li>
-            </ul>
-
-            <p>To validate these insights, we spoke with another physiotherapist and discovered that the pain point of
-                taking notes and compiling patient progress reports was indeed a big problem.</p>
-
-            <p>These insights were incredibly valuable to us as we moved forward with the design process, and helped us
-                to improve the focus of the Physmate app.</p>
-
-            <h3>Iterations based on user feedback</h3>
-            <p>After receiving feedback from physiotherapists during our usability test, we realized that our initial
-                focus on providing patients with self-assessment tools was not the most pressing need.</p>
-
-            <p>To make improvements early on in the design process, we decided to make some iterations to our problem
-                statement and focus on providing a platform for physiotherapists instead of patients.</p>
-
-            <p>To generate new ideas, we conducted a Crazy 6 exercise and 3-panel brainstorming session. Afterward, we
-                iterated on the wireframes based on the feedback we received.</p>
-
-            <p>As a result of this iteration phase, we shifted our primary user focus to physiotherapists. Our app was
-                now designed to provide tools to physiotherapists to help them be more efficient in their work.</p>
-
-
-            <h3>Visual Design</h3>
-
-            <p>During the visual design phase, our team worked meticulously to develop a brand identity for Physmate
-                that would resonate with the healthcare industry while evoking a soothing emotional response. We
-                carefully curated a color palette comprising of various shades of green and infused it into our logo and
-                user interface. These colors not only align with the healthcare industry but also evoke a sense of calm
-                and tranquility.</p>
-
-            <p>Moreover, we ensured that our design was accessible to all users by following the Web Content
-                Accessibility Guidelines (WCAG) AA standards. We gave special consideration to text sizes, contrasts,
-                and colors to ensure that our design was easily readable by everyone. Although we were not able to
-                achieve the AAA compliance, we made sure to incorporate the best possible color mix to enhance
-                accessibility.</p>
-
-            <h2>Final Design</h2>
-
-            <p>After several iterations based on user feedback, we have finalized the screen mockups for PhysMate. These
-                mockups showcase the different features and functionalities that we have incorporated into the app.</p>
-
-            <p>The main focus of the app is to provide physiotherapists with tools to manage their patients' recovery
-                journey. The mockups show how the app allows physiotherapists to create and manage patient profiles,
-                conduct assessments, track progress, and assign exercises.</p>
-
-            <img src="img/Physmate/Hi-Fidelity Screens 1.png" width="100%" alt="hi-fi screens 1">
-            <img src="img/Physmate/Hi-Fidelity Screens 2.png" width="100%" alt="hi-fi screens 1">
-
-            <h2>User Testing 2</h2>
-            <p>After finalizing the prototype, we conducted user testing to ensure the app was intuitive, user-friendly,
-                and met the needs of both physiotherapists and patients. We conducted three usability tests and gained
-                valuable insights into the user experience.</p>
-
-            <h3>Areas for Improvement</h3>
-            <ul>
-                <li>Hidden “Take New Assessment” page: Participants had to click through multiple pages to reach the
-                    core feature of the app. We need to make this feature more accessible.</li>
-
-                <li>The “Add a New Patient” feature was not immediately clear to users, as the icon alone did not
-                    effectively convey its meaning. To improve this, we could consider adding a more prominent button or
-                    label for this feature.</li>
-
-                <li>User flow: A user flow that allows assessments to be done first and assigned to patients later
-                    should be added.</li>
-            </ul>
-
-            <h2>Outcomes and Lessons</h2>
-            <p>Our team has learned a lot from this project, and we are proud of the outcomes we achieved. Here are some
-                of the key outcomes and lessons we learned:</p>
-
-            <h3>Outcomes</h3>
-            <ul>
-                <li>We developed a platform that provides a more efficient and user-friendly way for physiotherapists to
-                    manage their patients' recovery progress.</li>
-
-                <li>Our app provides patients with a way to monitor their progress, set goals, and stay motivated
-                    throughout their recovery journey.</li>
-
-                <li>We incorporated a soothing color palette and followed accessibility standards to ensure our design
-                    is inclusive and user-friendly.</li>
-
-                <li>We conducted multiple rounds of user testing and made iterations to our design based on feedback to
-                    ensure the app meets the needs of both physiotherapists and patients.</li>
-
-                <li>Our app has the potential to improve the recovery journey for patients and make the process more
-                    efficient for physiotherapists.</li>
-            </ul>
-
-            <h3>Lessons</h3>
-
-            <ul>
-                <li>Conducting user research and testing is crucial to developing a successful app that meets the needs
-                    of users.</li>
-
-                <li>It's important to be flexible and iterate on design based on feedback to ensure the app meets user
-                    needs.</li>
-
-                <li>Accessibility standards are crucial to ensure the app is inclusive and user-friendly for everyone.
-                </li>
-
-                <li>Designing for the healthcare industry requires a careful balance of functionality and emotional
-                    response.</li>
-
-                <li>Communication and collaboration within the team are key to developing a successful app.</li>
-            </ul>
-
-            <p>Overall, we are proud of the outcomes we achieved and the lessons we learned throughout this project. We
-                believe that PhysMate has the potential to make a positive impact on the recovery journey of patients
-                and improve the efficiency of physiotherapists' work.</p>
-
-            <h2>Conclusion</h2>
-
-            <p>Looking ahead, there is still much potential for PhysMate to continue evolving and meeting the needs of
-                both physiotherapists and their patients. One possibility is to allow patients to track their progress
-                and stay motivated through the app, providing a more comprehensive approach to their recovery journey.
-                Additionally, incorporating remote consultation and booking features could benefit patients in remote
-                areas or those with mobility challenges.</p>
-
-            <p>We are proud of the progress we have made so far, and the valuable insights and feedback we have received
-                from users throughout the development process. With continued dedication and innovation, we believe that
-                PhysMate can make a real difference in improving the lives of both physiotherapists and their patients.
-            </p>
-
-        </article>
+      <!-- Case Study -->
+      <article class="case-study">
+        <h1>
+          UX Case Study: Physmate, a Smart Goniometer App for Physiotherapists
+        </h1>
+        <p class="date"><small>April 17, 2023 • Utkarsh Singh</small></p>
+        <img
+          src="img/physmate/cover.png"
+          width="100%"
+          alt="Cover image for case study teasing the final app design."
+        />
+
+        <h2>Overview</h2>
+
+        <p>
+          Physiotherapists often use goniometers to measure joint range of
+          motion (R.O.M.) in their patients. However, this manual process can be
+          time-consuming and prone to errors. To address this issue, we designed
+          Physmate, a mobile app that offers an easy and accurate way to measure
+          and record R.O.M data.
+        </p>
+
+        <p>
+          Physmate is a smart goniometer app that utilizes the sensors on modern
+          smartphones to measure joint movement accurately. It generates
+          detailed reports that simplify the recording process for
+          physiotherapists. With our app, therapists can save valuable time that
+          would have been spent taking manual measurements and focus more on
+          providing care to their patients.
+        </p>
+
+        <p>
+          In this case study, I will take you through our design process and how
+          we created an intuitive and effective solution for physiotherapists.
+        </p>
+
+        <h2>Scope & Constraints</h2>
+
+        <p>
+          Physmate was a UX design project completed as part of the Interaction
+          Design program at Conestoga College. Our team of 5 students had 5
+          weeks to design a prototype for a physiotherapy application. The scope
+          of our project was limited to the design phase, including research,
+          ideation, prototyping, and testing.
+        </p>
+
+        <h2>Roles and Responsibilities</h2>
+
+        <div class="grey-textbox">
+          <p><b>What I did:</b></p>
+          <ul>
+            <li>Conducted user interviews and did empathy mapping.</li>
+            <li>Collaborated with Prasanna on user flows and wireframes.</li>
+            <li>
+              Designed and created high-fidelity mock-ups and the final
+              prototype.
+            </li>
+            <li>
+              Presented the final design to stakeholders along with Prasanna and
+              Alex.
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          I was privileged to work alongside a highly capable team, consisting
+          of Prasanna, Alex, Deepti, and Mubeen. Together, we conducted
+          extensive research, including user interviews, secondary research, and
+          competitive analysis. We met regularly to discuss our findings and
+          plan our next steps.
+        </p>
+
+        <p>
+          As we moved into the prototype phase, we divided responsibilities.
+          Prasanna and I worked on wireframes, while Deepti and Mubeen focused
+          on branding and user testing. I then took on the responsibility of
+          creating high-fidelity mockups and the final prototype. Meanwhile,
+          Alex, Deepti, and Prasanna worked on compiling research, creating the
+          stakeholder presentation, and the design process book.
+        </p>
+
+        <p>
+          Throughout the project, we maintained open communication and assisted
+          each other as needed. Our team had excellent synergy, and everyone
+          contributed 100% effort to the project. Finally, Prasanna, Alex and I
+          presented our design to the stakeholders.
+        </p>
+
+        <h2>The Problem</h2>
+
+        <p>
+          Through the interviews we conducted with practicing physiotherapists,
+          we learnt about one of their biggest pain points:
+        </p>
+
+        <ul>
+          <li>
+            Physiotherapists constantly need to juggle between assessing the
+            patient and noting down the measurements and readings from the
+            assessment.
+          </li>
+          <li>
+            Later, they have to spend a considerable amount of time compiling
+            and organizing this data into reports, often requiring them to stay
+            late to complete paperwork.
+          </li>
+        </ul>
+
+        <p>
+          Based on these research insights, we defined the problem statement.
+        </p>
+
+        <img
+          src="img/physmate/problem-statement.png"
+          class="no-round"
+          width="100%"
+          alt="Dr. Erica, a busy physiotherapist needs to record quantitative data regarding her patients’ recovery. But, it takes away too much of her time because she records and compiles the data manually."
+        />
+
+        <h2>Users and Audience</h2>
+
+        <p>
+          The primary users of Physmate are physiotherapists, who are
+          responsible for helping people affected by injury, illness or
+          disability through movement and exercise, manual therapy, education
+          and advice.
+        </p>
+
+        <img
+          src="img/physmate/persona-erica.png"
+          class="grey-border"
+          width="100%"
+          alt="User Persona - Dr. Erica, a physiotherapist."
+        />
+
+        <p>
+          Secondary users include patients who will benefit from the efficient
+          assessment and treatment process provided by Physmate. The audience
+          for this product includes physiotherapy clinics and hospitals where
+          physiotherapy is practiced.
+        </p>
+
+        <h2>Research</h2>
+
+        <p>
+          In order to gain a deeper understanding of the problem space and user
+          needs, we conducted various research activities. Our research focused
+          on identifying the pain points of physiotherapists, understanding the
+          needs of physiotherapy patients, and analyzing the competitive
+          landscape of existing mobile apps in the physiotherapy space.
+        </p>
+
+        <h3>Research Methods</h3>
+
+        <p>To gather insights, we used the following methods:</p>
+        <ol>
+          <li>
+            <strong
+              >Interviews with Physiotherapy Patients and Practitioners:</strong
+            >
+            We conducted in-depth interviews with 5 physiotherapy patients and 2
+            practicing physiotherapists to understand their experiences, pain
+            points, and needs. We asked open-ended questions and encouraged them
+            to share their thoughts and feelings about the physiotherapy
+            process.
+          </li>
+
+          <li>
+            <strong>Online Research:</strong> We did online research to gain an
+            understanding of how physiotherapy works in Ontario, the regulations
+            around the practice, and the challenges faced by patients and
+            practitioners.
+          </li>
+
+          <li>
+            <strong>Competitive Analysis:</strong> We analyzed the mobile apps
+            available in the physiotherapy space to identify their strengths,
+            weaknesses, and features.
+          </li>
+
+          <li>
+            <strong>User Testing:</strong> We conducted user testing with our
+            prototype to gather feedback and insights from potential users.
+          </li>
+        </ol>
+
+        <h3>Key Research Insights:</h3>
+
+        <h4>Pain points for physiotherapists:</h4>
+        <ul>
+          <li>
+            The need to constantly juggle between assessing patients and
+            documenting data
+          </li>
+          <li>
+            The time-consuming nature of creating reports based on assessment
+            data
+          </li>
+          <li>Late-night work hours due to paperwork overload</li>
+        </ul>
+
+        <h4>Other Important Insights:</h4>
+        <ul>
+          <li>
+            Passive range of motion is a key indicator of a patient's progress.
+          </li>
+          <li>
+            Patients who have a better understanding of their treatment and
+            progress are more likely to do their at home exercises and recover
+            faster.
+          </li>
+        </ul>
+
+        <h3>Competitor Analysis</h3>
+
+        <p class="grey-textbox">
+          Physmate stands out from the rest as it offers a solution for use by
+          physiotherapists in clinics.
+        </p>
+
+        <p>
+          In order to validate the technical feasibility of our design and
+          identify our niche, we examined various top physiotherapy apps in the
+          market. Most of the apps focused on offering exercise programs for
+          remote physiotherapy, with some providing self-assessment tools for
+          patients to send to physiotherapists. We identified two products that
+          were similar enough to our app to be considered as competitors:
+        </p>
+        <ul>
+          <li>
+            <b><a href="https://www.mirarehab.com/product/">Mira</a></b
+            ><br />
+            A gamified video physiotherapy exercise tool that allows for video
+            range of motion assessments to be done.<br />
+            * Requires additional sensors.
+          </li>
+
+          <li>
+            <b><a href="https://www.exer.ai/">Exer</a></b
+            ><br />
+            An at-home physiotherapy tool that uses Augmented Reality for
+            patient self-assessment.<br />
+            * Requires correct camera placement.
+          </li>
+        </ul>
+
+        <p>
+          However, these products do not specifically target physiotherapists as
+          their primary users. Physmate, on the other hand, offers a solution
+          specifically designed for use by physiotherapists in clinics. This
+          sets us apart from our competitors and gives us our niche in the
+          market. We believe that this market is underserved and we can provide
+          great value to professionals in the field.
+        </p>
+
+        <h3>Technology Validation through Secondary Research</h3>
+
+        <p>
+          To validate our app's technical feasibility, we conducted secondary
+          research that led us to two relevant research papers:
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6505893/"
+              >'Reliability and validity of clinically accessible smartphone
+              applications to measure joint range of motion: A systematic
+              review'</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://www.sciencedirect.com/science/article/abs/pii/S1934148214002147"
+              >'Mobile Smartphone Applications for Body Position Measurement in
+              Rehabilitation: A Review of Goniometric Tools'</a
+            >
+          </li>
+        </ul>
+
+        <p>
+          These research papers concluded that smartphone-based digital
+          goniometers are accurate enough to replace standard goniometers used
+          by clinicians. The research, conducted on a range of devices,
+          indicates that most modern smartphones have this capability. The
+          review also confirmed a competent development team can create this
+          tool without proprietary software, using only device hardware.
+        </p>
+
+        <h2>Design Process</h2>
+
+        <h3>Ideation</h3>
+        <p>
+          To generate ideas for the Physmate app, we conducted brainstorming
+          exercises like Crazy 6s and 3-panel sketching.
+        </p>
+
+        <h3>Crazy 6s</h3>
+        <p>
+          During Crazy 6s, we generated multiple ideas, critiqued each other's
+          proposals, and selected the most promising ones to proceed with.
+        </p>
+        <img
+          src="img/physmate/crazy6.jpg"
+          width="100%"
+          alt="Crazy 6 sketches"
+        />
+
+        <h3>3-Panel Sketches</h3>
+        <p>
+          We then used 3-panel sketching to further develop and refine our
+          ideas.
+        </p>
+        <img
+          src="img/physmate/3panel.jpg"
+          width="100%"
+          alt="3 Panel Sketches with dot voting."
+        />
+
+        <h3>Idea Convergence</h3>
+        <p>
+          Finally, we used dot voting to converge on the most promising idea to
+          take forward for the design process.
+        </p>
+        <img
+          src="img/physmate/idea-convergence.png"
+          width="100%"
+          alt="Idea Convergence Sketches"
+        />
+
+        <h3>User Flows</h3>
+        <p>
+          To ensure an intuitive user experience, we created user flows for
+          Physmate. We began by mapping out the primary user journey, which
+          involves the physiotherapist logging in, selecting the patient and the
+          body part they wish to assess, performing the assessment, and
+          generating a report. We then created secondary user flows to cover any
+          additional features, such as adding new patients and reviewing
+          previous assessments. By creating user flows, we were able to identify
+          potential pain points in the user journey and make adjustments to
+          create a more streamlined experience.
+        </p>
+        <img
+          src="img/physmate/user-flow.png"
+          width="100%"
+          alt="User Flow Diagrams"
+        />
+
+        <h3>Information Architecture</h3>
+        <p>
+          We designed the information architecture of Physmate to be intuitive
+          and easy to navigate. We began by identifying the primary features of
+          the app, such as the ability to select a patient, select a body part,
+          and perform an assessment. We then organized these features into a
+          logical hierarchy to ensure that users can quickly and easily find
+          what they need. We also included clear labels and icons to aid
+          navigation and ensure a seamless user experience.
+        </p>
+        <img
+          src="img/physmate/information-architecture.png"
+          width="100%"
+          alt="Information Architecture"
+        />
+
+        <h3>Wireframes</h3>
+        <p>
+          Using the information architecture as a guide, we created wireframes
+          for Physmate. We began with low-fidelity wireframes to explore
+          different layout options and ensure that the primary features of the
+          app were included.
+        </p>
+        <img src="img/physmate/wireframes.png" width="100%" alt="wireframes" />
+
+        <h3>Test Early, Test Often (User Testing 1)</h3>
+        <p>
+          At this stage, we heeded our professor's advice to “test early, test
+          often”. We recognized the importance of conducting user tests early on
+          in the design process to identify areas of improvement and iterate
+          quickly.
+        </p>
+
+        <p>
+          To conduct our usability tests, we enlisted the help of a
+          physiotherapist to participate in the study. We used medium-fidelity
+          wireframes to gather feedback. The physiotherapist provided valuable
+          insights that we had not considered before, such as:
+        </p>
+
+        <ul>
+          <li>
+            The importance of tracking both active and passive range of motion
+            in patient assessments, with passive ROM being crucial in assessing
+            progress.
+          </li>
+
+          <li>
+            The difficulty of taking notes while assisting patients with their
+            assessments, and the subsequent challenge of compiling those notes
+            into a report.
+          </li>
+
+          <li>
+            The effectiveness of sending progress reports to patients to
+            motivate them to continue their recovery journey.
+          </li>
+
+          <li>The industry standard scales used to measure pain levels.</li>
+        </ul>
+
+        <p>
+          To validate these insights, we spoke with another physiotherapist and
+          discovered that the pain point of taking notes and compiling patient
+          progress reports was indeed a big problem.
+        </p>
+
+        <p>
+          These insights were incredibly valuable to us as we moved forward with
+          the design process, and helped us to improve the focus of the Physmate
+          app.
+        </p>
+
+        <h3>Iterations based on user feedback</h3>
+        <p>
+          After receiving feedback from physiotherapists during our usability
+          test, we realized that our initial focus on providing patients with
+          self-assessment tools was not the most pressing need.
+        </p>
+
+        <p>
+          To make improvements early on in the design process, we decided to
+          make some iterations to our problem statement and focus on providing a
+          platform for physiotherapists instead of patients.
+        </p>
+
+        <p>
+          To generate new ideas, we conducted a Crazy 6 exercise and 3-panel
+          brainstorming session. Afterward, we iterated on the wireframes based
+          on the feedback we received.
+        </p>
+
+        <p>
+          As a result of this iteration phase, we shifted our primary user focus
+          to physiotherapists. Our app was now designed to provide tools to
+          physiotherapists to help them be more efficient in their work.
+        </p>
+
+        <h3>Visual Design</h3>
+
+        <p>
+          During the visual design phase, our team worked meticulously to
+          develop a brand identity for Physmate that would resonate with the
+          healthcare industry while evoking a soothing emotional response. We
+          carefully curated a color palette comprising of various shades of
+          green and infused it into our logo and user interface. These colors
+          not only align with the healthcare industry but also evoke a sense of
+          calm and tranquility.
+        </p>
+
+        <p>
+          Moreover, we ensured that our design was accessible to all users by
+          following the Web Content Accessibility Guidelines (WCAG) AA
+          standards. We gave special consideration to text sizes, contrasts, and
+          colors to ensure that our design was easily readable by everyone.
+          Although we were not able to achieve the AAA compliance, we made sure
+          to incorporate the best possible color mix to enhance accessibility.
+        </p>
+
+        <h2>Final Design</h2>
+
+        <p>
+          After several iterations based on user feedback, we have finalized the
+          screen mockups for PhysMate. These mockups showcase the different
+          features and functionalities that we have incorporated into the app.
+        </p>
+
+        <p>
+          The main focus of the app is to provide physiotherapists with tools to
+          manage their patients' recovery journey. The mockups show how the app
+          allows physiotherapists to create and manage patient profiles, conduct
+          assessments, track progress, and assign exercises.
+        </p>
+
+        <img
+          src="img/physmate/hi-fi-screens-1.png"
+          width="100%"
+          alt="hi-fi screens 1"
+        />
+        <img
+          src="img/physmate/hi-fi-screens-2.png"
+          width="100%"
+          alt="hi-fi screens 1"
+        />
+
+        <h2>User Testing 2</h2>
+        <p>
+          After finalizing the prototype, we conducted user testing to ensure
+          the app was intuitive, user-friendly, and met the needs of both
+          physiotherapists and patients. We conducted three usability tests and
+          gained valuable insights into the user experience.
+        </p>
+
+        <h3>Areas for Improvement</h3>
+        <ul>
+          <li>
+            Hidden “Take New Assessment” page: Participants had to click through
+            multiple pages to reach the core feature of the app. We need to make
+            this feature more accessible.
+          </li>
+
+          <li>
+            The “Add a New Patient” feature was not immediately clear to users,
+            as the icon alone did not effectively convey its meaning. To improve
+            this, we could consider adding a more prominent button or label for
+            this feature.
+          </li>
+
+          <li>
+            User flow: A user flow that allows assessments to be done first and
+            assigned to patients later should be added.
+          </li>
+        </ul>
+
+        <h2>Outcomes and Lessons</h2>
+        <p>
+          Our team has learned a lot from this project, and we are proud of the
+          outcomes we achieved. Here are some of the key outcomes and lessons we
+          learned:
+        </p>
+
+        <h3>Outcomes</h3>
+        <ul>
+          <li>
+            We developed a platform that provides a more efficient and
+            user-friendly way for physiotherapists to manage their patients'
+            recovery progress.
+          </li>
+
+          <li>
+            Our app provides patients with a way to monitor their progress, set
+            goals, and stay motivated throughout their recovery journey.
+          </li>
+
+          <li>
+            We incorporated a soothing color palette and followed accessibility
+            standards to ensure our design is inclusive and user-friendly.
+          </li>
+
+          <li>
+            We conducted multiple rounds of user testing and made iterations to
+            our design based on feedback to ensure the app meets the needs of
+            both physiotherapists and patients.
+          </li>
+
+          <li>
+            Our app has the potential to improve the recovery journey for
+            patients and make the process more efficient for physiotherapists.
+          </li>
+        </ul>
+
+        <h3>Lessons</h3>
+
+        <ul>
+          <li>
+            Conducting user research and testing is crucial to developing a
+            successful app that meets the needs of users.
+          </li>
+
+          <li>
+            It's important to be flexible and iterate on design based on
+            feedback to ensure the app meets user needs.
+          </li>
+
+          <li>
+            Accessibility standards are crucial to ensure the app is inclusive
+            and user-friendly for everyone.
+          </li>
+
+          <li>
+            Designing for the healthcare industry requires a careful balance of
+            functionality and emotional response.
+          </li>
+
+          <li>
+            Communication and collaboration within the team are key to
+            developing a successful app.
+          </li>
+        </ul>
+
+        <p>
+          Overall, we are proud of the outcomes we achieved and the lessons we
+          learned throughout this project. We believe that PhysMate has the
+          potential to make a positive impact on the recovery journey of
+          patients and improve the efficiency of physiotherapists' work.
+        </p>
+
+        <h2>Conclusion</h2>
+
+        <p>
+          Looking ahead, there is still much potential for PhysMate to continue
+          evolving and meeting the needs of both physiotherapists and their
+          patients. One possibility is to allow patients to track their progress
+          and stay motivated through the app, providing a more comprehensive
+          approach to their recovery journey. Additionally, incorporating remote
+          consultation and booking features could benefit patients in remote
+          areas or those with mobility challenges.
+        </p>
+
+        <p>
+          We are proud of the progress we have made so far, and the valuable
+          insights and feedback we have received from users throughout the
+          development process. With continued dedication and innovation, we
+          believe that PhysMate can make a real difference in improving the
+          lives of both physiotherapists and their patients.
+        </p>
+      </article>
     </main>
 
     <!---------- Footer ---------->
     <footer id="footer">
-        <div class="left-footer">
-            <p>Wanna talk? Send me an email.<br>
-                hi@utkarsh-singh.com</p>
-            <div class="contact-buttons">
-                <a href="mailto:hi@utkarsh-singh.com">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512">
-                        <path
-                            d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-                    </svg>
-                </a>
-                <a href="https://www.linkedin.com/in/utkarshello">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                        viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
-                    </svg>
-                </a>
-                <a href="https://dribbble.com/utkarsh-singh">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M256 8C119.252 8 8 119.252 8 256s111.252 248 248 248 248-111.252 248-248S392.748 8 256 8zm163.97 114.366c29.503 36.046 47.369 81.957 47.835 131.955-6.984-1.477-77.018-15.682-147.502-6.818-5.752-14.041-11.181-26.393-18.617-41.614 78.321-31.977 113.818-77.482 118.284-83.523zM396.421 97.87c-3.81 5.427-35.697 48.286-111.021 76.519-34.712-63.776-73.185-116.168-79.04-124.008 67.176-16.193 137.966 1.27 190.061 47.489zm-230.48-33.25c5.585 7.659 43.438 60.116 78.537 122.509-99.087 26.313-186.36 25.934-195.834 25.809C62.38 147.205 106.678 92.573 165.941 64.62zM44.17 256.323c0-2.166.043-4.322.108-6.473 9.268.19 111.92 1.513 217.706-30.146 6.064 11.868 11.857 23.915 17.174 35.949-76.599 21.575-146.194 83.527-180.531 142.306C64.794 360.405 44.17 310.73 44.17 256.323zm81.807 167.113c22.127-45.233 82.178-103.622 167.579-132.756 29.74 77.283 42.039 142.053 45.189 160.638-68.112 29.013-150.015 21.053-212.768-27.882zm248.38 8.489c-2.171-12.886-13.446-74.897-41.152-151.033 66.38-10.626 124.7 6.768 131.947 9.055-9.442 58.941-43.273 109.844-90.795 141.978z" />
-                    </svg>
-                </a>
-                <a href="https://www.instagram.com/utkarshello">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                        viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                    </svg>
-                </a>
-                <a href="https://medium.com/@utkarshello">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                        viewBox="0 0 640 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z" />
-                    </svg>
-                </a>
-                <a href="https://youtube.com/@helloutkarsh/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                        viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
-                    </svg>
-                </a>
-            </div>
+      <div class="left-footer">
+        <p>
+          Wanna talk? Send me an email.<br />
+          hi@utkarsh-singh.com
+        </p>
+        <div class="contact-buttons">
+          <a href="mailto:hi@utkarsh-singh.com">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2em"
+              height="2em"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+              />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/utkarshello">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2em"
+              height="2em"
+              viewBox="0 0 448 512"
+            >
+              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+              />
+            </svg>
+          </a>
+          <a href="https://dribbble.com/utkarsh-singh">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2em"
+              height="2em"
+              viewBox="0 0 512 512"
+            >
+              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M256 8C119.252 8 8 119.252 8 256s111.252 248 248 248 248-111.252 248-248S392.748 8 256 8zm163.97 114.366c29.503 36.046 47.369 81.957 47.835 131.955-6.984-1.477-77.018-15.682-147.502-6.818-5.752-14.041-11.181-26.393-18.617-41.614 78.321-31.977 113.818-77.482 118.284-83.523zM396.421 97.87c-3.81 5.427-35.697 48.286-111.021 76.519-34.712-63.776-73.185-116.168-79.04-124.008 67.176-16.193 137.966 1.27 190.061 47.489zm-230.48-33.25c5.585 7.659 43.438 60.116 78.537 122.509-99.087 26.313-186.36 25.934-195.834 25.809C62.38 147.205 106.678 92.573 165.941 64.62zM44.17 256.323c0-2.166.043-4.322.108-6.473 9.268.19 111.92 1.513 217.706-30.146 6.064 11.868 11.857 23.915 17.174 35.949-76.599 21.575-146.194 83.527-180.531 142.306C64.794 360.405 44.17 310.73 44.17 256.323zm81.807 167.113c22.127-45.233 82.178-103.622 167.579-132.756 29.74 77.283 42.039 142.053 45.189 160.638-68.112 29.013-150.015 21.053-212.768-27.882zm248.38 8.489c-2.171-12.886-13.446-74.897-41.152-151.033 66.38-10.626 124.7 6.768 131.947 9.055-9.442 58.941-43.273 109.844-90.795 141.978z"
+              />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/utkarshello">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2em"
+              height="2em"
+              viewBox="0 0 448 512"
+            >
+              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+              />
+            </svg>
+          </a>
+          <a href="https://medium.com/@utkarshello">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2em"
+              height="2em"
+              viewBox="0 0 640 512"
+            >
+              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"
+              />
+            </svg>
+          </a>
+          <a href="https://youtube.com/@helloutkarsh/">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2em"
+              height="2em"
+              viewBox="0 0 576 512"
+            >
+              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+              />
+            </svg>
+          </a>
         </div>
-        <div class="footer-right">
-            <p>Copyright © Utkarsh Singh.<br>
-                I can code a little too. This website is proof.</p>
-        </div>
+      </div>
+      <div class="footer-right">
+        <p>
+          Copyright © Utkarsh Singh.<br />
+          I can code a little too. This website is proof.
+        </p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

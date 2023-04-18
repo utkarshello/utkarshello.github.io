@@ -4,9 +4,17 @@ Headings Black: #222222;
 Body Grey, dark: #444444;
 */
 
-/* ---------- TYPOGRAPHY ---------- */
+/* ---------- VARIABLE STYLES ---------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@900&display=swap');
+:root {
+  --color-body: #555;
+  --black: #222;
+  --grey-bg: #f3f3f3;
+  --grey-border: #ccc;
+  --grey-text: #767676;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
 
 /* Fluid Responsive Font Size - 21px on desktop & 16px on mobile */
 html {
@@ -15,10 +23,10 @@ html {
 
 body {
   background: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   line-height: 1.618;
-  color: #444444;
+  color: var(--color-body);
   margin: 0 auto;
 }
 
@@ -32,14 +40,13 @@ p {
   margin-bottom: 1rem;
 }
 
-
 h1 {
   margin: 0 0 1.38rem;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 900;
   line-height: 1.3;
   font-size: 2rem;
-  color: #222222;
+  color: var(--black);
 }
 
 h2,
@@ -48,10 +55,10 @@ h4,
 h5,
 h6 {
   margin: 3rem 0 1.38rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   line-height: 1.3;
-  color: #222222;
+  color: var(--black);
 }
 
 /* TypeScale - Major Third - 1.250 */
@@ -76,29 +83,32 @@ small,
 
 /* .big-sub {font-size: 1.25rem;} */
 
-
 /* ---------- GLOBAL STYLES ---------- */
 
-
-div,
 img {
-  border-radius: 24px;
+  border-radius: 1rem;
+  font-size: clamp(14px, 0.85rem, 18px);
+  color: var(--grey-text);
 }
 
 button {
   background-color: #dadada;
-  color: #222222;
-  border: 2px solid #222222;
+  color: var(--black);
+  border: 2px solid var(--black);
   padding: 16px 48px;
   font-size: 16px;
   font-weight: 500;
 }
 
 button:hover {
-  background-color: #222222;
+  background-color: var(--black);
   color: white;
-  border: 2px solid #222222;
+  border: 2px solid var(--black);
   padding: 14px 46px;
+}
+
+article {
+  margin-top: 4rem;
 }
 
 /* ---------- HEADER ---------- */
@@ -109,13 +119,12 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.75);
   z-index: 999;
   backdrop-filter: blur(10px);
   padding: 0 calc(8px + 1.5625vw);
   position: sticky;
   top: 0;
-  margin-bottom: 4rem;
 }
 
 .header-nav ul {
@@ -169,7 +178,6 @@ header {
   color: #444;
 }
 
-
 /* ---------- HERO NAV ---------- */
 
 .hero-nav ul {
@@ -195,7 +203,8 @@ header {
   border-color: #fff #fff #222 #fff;
   border-style: solid;
   border-width: 2px 0 2px;
-  transition: background-color 0.3s ease-out, border-color 0.3s ease-out, border-radius 0.3s ease-out;
+  transition: background-color 0.3s ease-out, border-color 0.3s ease-out,
+    border-radius 0.3s ease-out;
 }
 
 .hero-nav a:hover {
@@ -204,7 +213,6 @@ header {
   border-color: #222;
   border-radius: 4px;
 }
-
 
 /* ---------- WORK SECTION ---------- */
 
@@ -224,7 +232,6 @@ header {
   position: relative;
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
   overflow: hidden;
 }
 
@@ -235,6 +242,7 @@ header {
 
 .project-card p {
   font-size: clamp(14px, 0.85rem, 18px);
+  color: var(--color-body);
 }
 
 .project-card * {
@@ -246,13 +254,12 @@ header {
 }
 
 .project-card {
-transition: transform .2s; /* Animation */
+  transition: transform 0.2s; /* Animation */
 }
 
-.project-card:hover{
+.project-card:hover {
   transform: scale(1.025);
 }
-
 
 /* ---------- FOOTER SECTION ---------- */
 
@@ -266,7 +273,6 @@ footer {
   align-items: end;
 }
 
-
 .footer-right {
   display: flex;
   flex-direction: column;
@@ -275,33 +281,11 @@ footer {
   justify-content: flex-end;
 }
 
-.footer-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-.footer-nav a {
-  color: #767676;
-  text-decoration: none;
-}
-
-.footer-nav * {
-  display: inline;
-  color: #767676;
-  text-decoration: none;
-  margin: 0 10px;
-  padding: 0;
-}
-
-footer nav a:hover {
-  color: #222222;
-}
-
 .footer-right p {
   margin-bottom: 0;
 }
 
-/* MAKING FOOTER RESPONSIVE */
+/* ---------- MAKING FOOTER RESPONSIVE ---------- */
 
 @media (max-width: 600px) {
   #footer {
@@ -331,20 +315,18 @@ footer nav a:hover {
   }
 }
 
-
-
 /* ---------- UX Case Study Page ---------- */
 
 .date {
-  color: #767676;
+  color: var(--grey-text);
   margin-bottom: 2rem;
   margin-top: -1rem;
 }
 
 .grey-textbox {
-  background-color: #F3F3F3;
+  background-color: var(--grey-bg);
   padding: 2rem 2rem 2rem;
-  border-radius: 24px;
+  border-radius: 1rem;
 }
 
 .no-round {
@@ -352,9 +334,9 @@ footer nav a:hover {
 }
 
 .grey-border {
-  border: #ccc solid 1px;
+  border: var(--grey-border) solid 1px;
 }
 
 a {
-  color: #222;
+  color: var(--black);
 }
